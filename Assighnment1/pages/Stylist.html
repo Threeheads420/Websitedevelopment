@@ -1,0 +1,241 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site Explanation</title>
+  <link rel="stylesheet" href="../css/project.css" />
+ <style>
+  .contents {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  .contents h2 {
+    margin-top: 0;
+  }
+  .contents ul {             
+    columns: 2;
+    padding-left: 1rem;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .row > div {
+    flex: 1 1 320px;
+  }
+  .code, .mini {
+    border-radius: 8px;
+    padding: .75rem;
+  }
+  .code {
+    background: #0b1220;
+    color: #e2e8f0;
+    overflow: auto;
+    font-family: monospace;
+    font-size: .9rem;
+  }
+  .mini {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+  }
+  .note {
+    color: #475569;
+    font-size: .95rem;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Explanation — How This Site Works</h1>
+    <p id="tagline">A breakdown of each section, with tiny live examples.</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../index.html">Home</a>
+    <a href="../pages/hobbies.html">Hobbies</a>
+    <a href="../pages/chess.html">Chess</a>
+    <a href="../pages/christmas-tree.html">Science</a>
+    <a href="../pages/Stylist.html" aria-current="page">GiveMeStyle</a>
+  </nav>
+  <section class="intro-duane">
+  <div class="duane-text">
+    <h2>Hi! I'm Duane Dibley!</h2>
+    <p><em>
+      That’s right — Duane Dibley!  
+      The least cool cat in the galaxy, reporting for duty.  
+      I’ll be your guide through this dazzling world of <code>CSS</code> styles.  
+      Buttons, boxes, borders — I’ve got it all (well… mostly) under control.  
+      So polish your sandals, straighten that comb-over, and let’s make this site shine brighter than my teeth!
+    </em></p>
+  </div>
+  <img src="../images/duane.jpg" alt="Duane Dibley looking awkward but cheerful" class="duane-pic">
+</section>
+
+  <main>
+    <section class="contents">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#header">Header & Tagline</a></li>
+        <li><a href="#nav">Navigation</a></li>
+        <li><a href="#grid">Grid of Cards</a></li>
+        <li><a href="#table">Table Styling</a></li>
+        <li><a href="#figure">Figure & Figcaption</a></li>
+        <li><a href="#links">Links & States</a></li>
+        <li><a href="#utilities">Utilities & Highlights</a></li>
+        <li><a href="#accessibility">Accessibility Touches</a></li>
+        <li><a href="#background">Background Tile</a></li>
+      </ul>
+    </section>
+
+    <h2 id="header">1) Header & Tagline</h2>
+    <div class="row">
+      <div class="ex mini">
+        <header>
+          <h1>My Personal Site</h1>
+          <p id="tagline">Nunquam Cedo — Never Surrender</p>
+        </header>
+      </div>
+      <div class="txt">
+        <p>The header contains the site title and <code>#tagline</code>. The CSS gives it a navy background and a lighter band below for emphasis.</p>
+        <div class="code">
+<code>&lt;header&gt;
+  &lt;h1&gt;My Personal Site&lt;/h1&gt;
+  &lt;p id="tagline"&gt;Nunquam Cedo — Never Surrender&lt;/p&gt;
+&lt;/header&gt;</code>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="nav">2) Navigation (Accessible & Highlighted)</h2>
+    <div class="row">
+      <div class="ex mini">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#" aria-current="page">Home</a>
+          <a href="../pages/hobbies.html">Hobbies</a>
+          <a href="../pages/chess.html">Chess</a>
+          <a href="../pages/christmas-tree.html">Science</a>
+          <a href="../pages/Stylist.html">GiveMeStyle</a>
+        </nav>
+      </div>
+      <div class="txt">
+        <p>Navigation uses Flexbox to space links evenly. <code>aria-label="Primary"</code> names the menu for accessibility. The active page uses <code>aria-current="page"</code> for highlight.</p>
+        <div class="code">
+<code>&lt;nav class="site-nav" aria-label="Primary"&gt;
+  &lt;a href="..." aria-current="page"&gt;Home&lt;/a&gt;
+  ...
+&lt;/nav&gt;</code>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="grid">3) Grid of Cards</h2>
+    <div class="row">
+      <div class="ex mini">
+        <div class="grid">
+          <section class="card"><h3>Card A</h3><p>Short text.</p></section>
+          <section class="card"><h3>Card B</h3><p>Short text.</p></section>
+          <section class="card"><h3>Card C</h3><p>Short text.</p></section>
+        </div>
+      </div>
+      <div class="txt">
+        <p><code>.grid</code> makes a responsive flex container, while <code>.card</code> gives each box padding, rounded edges, and a drop shadow.</p>
+      </div>
+    </div>
+
+    <h2 id="table">4) Table Styling</h2>
+    <div class="row">
+      <div class="ex mini">
+        <table>
+          <thead><tr><th>Day</th><th>Class</th></tr></thead>
+          <tbody>
+            <tr><td>Mon</td><td>Website Dev 1</td></tr>
+            <tr><td>Wed</td><td>Design Principles</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="txt">
+        <p>Tables use collapsed borders and alternate row colors with <code>nth-of-type</code>. Hovering a row slightly highlights it.</p>
+      </div>
+    </div>
+
+    <h2 id="figure">5) Figure & Figcaption</h2>
+    <div class="row">
+      <div class="ex mini">
+        <figure>
+          <img src="../images/figure-sample.jpg" alt="Abstract artwork">
+          <figcaption>Image with caption example.</figcaption>
+        </figure>
+      </div>
+      <div class="txt">
+        <p><code>&lt;figure&gt;</code> groups an image with its <code>&lt;figcaption&gt;</code>, adding semantic meaning. CSS gives borders and soft corners.</p>
+      </div>
+    </div>
+
+    <h2 id="links">6) Links & States</h2>
+    <div class="row">
+      <div class="ex mini">
+        <p>Normal <a href="#">link</a>, <a href="#">visited</a>, and <a href="#">hover</a>.</p>
+      </div>
+      <div class="txt">
+        <p>Base color comes from your brand variable. Hover adds underline and accent color. Visited links darken slightly.</p>
+      </div>
+    </div>
+
+    <h2 id="utilities">7) Utilities & Highlights</h2>
+    <div class="row">
+      <div class="ex mini">
+        <p>Inline <span class="highlight">highlight</span> example and a <span class="note">note</span> style below.</p>
+      </div>
+      <div class="txt">
+        <p><code>.highlight</code> adds background emphasis, while <code>.note</code> softens tone for side information.</p>
+      </div>
+    </div>
+
+    <h2 id="accessibility">8) Accessibility Touches</h2>
+    <div class="row">
+      <div class="ex mini">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#" aria-current="page">Current</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </nav>
+      </div>
+      <div class="txt">
+        <ul>
+          <li><code>aria-label</code> names the navigation for screen readers.</li>
+          <li><code>aria-current</code> marks the active page.</li>
+          <li>Images include clear <code>alt</code> text.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="background">9) Background Tile</h2>
+    <div class="row">
+      <div class="ex mini">
+        <p class="note">The site background uses a tiled image with a fallback color, creating texture without distraction.</p>
+      </div>
+      <div class="txt">
+        <div class="code">
+<code>body{
+  background-image:url("../images/tile-bg.png");
+  background-repeat:repeat;
+  background-attachment:fixed;
+  background-color:#eef3fb;
+}</code>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Steven Condra — Assignment One</small>
+  </footer>
+</body>
+</html>

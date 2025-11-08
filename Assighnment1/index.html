@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="css/project.css">
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+     </style>
+</head>
+
+<body>
+<header>
+    <h1>My Personal Site</h1>
+    <p >Nunquam Cedo</p>
+  </header>
+    
+  <nav class="site-nav">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="pages/hobbies.html">Hobbies</a>
+    <a href="pages/chess.html">Chess</a>
+    <a href="pages/christmas-tree.html">Science</a>
+    <a href="pages/stylist.html">GiveMeStyle</a>
+  </nav>
+
+  <main>
+   
+    <h1>Welcome</h1>
+    <p>Thanks for visiting my site. This paragraph uses a
+      <span class="highlight">class</span> for emphasis and a
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">useful external link</a>.
+    </p>
+
+    <div class="grid">
+      <!--About Me -->
+      <section class="card">
+        <h2>About Me<img src="images/itsMe.jpg" alt="Steven Condra" class="aboutme-pic"></h2>
+        
+        <p>I’m a first-year student in SETU Waterford. I am studying Computer Science, SE600. My student number is <i>20105977</i>.</p>
+        <p>There are many students, so we’re divided into smaller groups for classes. I’m in <i>W2</i> and <i>P3</i> for differant subjects.</p>
+      </section>
+
+      <!-- SETU -->
+      <section class="card">
+        <h2>Where Most Classes Are Held</h2>
+        <figure><img src="images/setu.jpg" alt="The SETU Walton Building in Waterford" width="420">
+          <figcaption>
+            The Walton Building at South East Technological University (SETU) Waterford is home to most computing and technology programmes. 
+            It’s where we have practical labs, workshops, and project sessions for Computer Science students.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!--timetable-->
+      <section class="card">
+        <h2>Weekly Timetable</h2>
+        <table>
+          <thead> <!--the table header-->
+            <tr><th>Day</th><th>Subject</th><th>Room</th></tr><!--row-->
+          </thead>
+          <tbody>
+            <tr><td>Mon</td><td>Website Development</td><td>IT220</tr><!--columns-->
+            <tr><td>Wed</td><td>Website Development</td><td>ITG18</td></tr>
+            <tr><td>Fri</td><td>Website Development</td><td>IT220</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+ <footer>
+  <p>&copy; 2025 Steven Condra --Assignment One--  Personal Website</p>
+  <p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" style="border:0;width:88px;height:31px">
+    </a>
+  </p>
+</footer>
+</body>
+</html>

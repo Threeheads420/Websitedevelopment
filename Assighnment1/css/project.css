@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+body {
+  margin: 0;
+  background-image: url("../images/tile-bg.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-color: #eef3fb;
+}
+a { color: #1a4b7a; text-decoration: none; }
+a:visited { color: #5a2f82; }
+a:hover { color: #f3b61f; text-decoration: underline; }
+a:active { opacity: .8; }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header, footer { background: #1a4b7a; color: white; }
+header nav a, footer a { color: #fff; }
+header .inner, main .inner, footer .inner {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 1rem;
+}
+header .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.logo { font-weight: 800; letter-spacing: .3px; }
+main .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.card {
+  background: #f7f9fc;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  flex: 1 1 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+th, td {
+  padding: .6rem .8rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+tbody tr:nth-of-type(odd) { background: #fafafa; 
+}
+tbody tr:hover { background: #fff6e5; 
+}
+
+figure {
+  margin: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+figcaption {
+  padding: .5rem .75rem;
+  color: #666;
+  font-size: .95rem;
+}
+
+.highlight {
+  background: #fff8cc;
+  padding: .25rem .4rem;
+  border-radius: .35rem;
+}
+#slogan {
+  font-style: italic;
+  color: #f0fdf4;
+  background: #14532d;
+  padding: .2rem .5rem;
+  border-radius: .35rem;
+}
+main p a { border-bottom: 1px dashed currentColor;
+}
+
+
+footer {
+  margin-top: auto;
+}
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .6rem;
+  font-size: .95rem;
+}
+footer a {
+  color: #ffd700;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+small { color: #f1f5f9; }
+
+nav.site-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1f2b;
+  padding: 0.75rem;
+  border-bottom: 2px solid #2e3a50;
+}
+nav.site-nav a {
+  flex: 1;
+  text-align: center;
+  margin: 0 0.25rem;
+  padding: 0.75rem 0.5rem;
+  background: #2a3144;
+  color: #e9eef7;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.15s;
+}
+nav.site-nav a:hover {
+  background: #3c4560;
+  transform: scale(1.04);
+}
+nav.site-nav a[aria-current="page"] {
+  background: #5566aa;
+  font-weight: 700;
+}
+.intro-duane {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.duane-pic {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #5566aa;
+}
+.aboutme-pic, .chessboard-pic {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.hobby-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hobby-image img {
+  width: 200px;
+  height: auto;
+}
+.in-pictures {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.in-pictures .text-side { flex: 1; }
+.in-pictures .image-side {
+  flex: 1;
+  text-align: right;
+}
+.in-pictures img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .in-pictures {
+    flex-direction: column;
+    text-align: center;
+}
+  .in-pictures .image-side {
+    text-align: center;
+}
+  .in-pictures img {
+    width: 100%;
+    max-width: 350px;
+}
