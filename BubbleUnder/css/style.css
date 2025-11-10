@@ -38,8 +38,10 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  display: inline;
+nav ul li  {
+  padding: 10px 20px;
+}
+
 }
 
 nav ul li a {
@@ -100,3 +102,95 @@ body {
     width: 80%;
     margin: 0 auto;
 }
+.hobby-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hobby-image img {
+  width: 200px;
+  height: auto;
+  float: left;
+}
+table#events th, table#events td {
+  padding: .3em;
+  border:solid black 1px;
+}
+
+table#events {
+  border-collapse: collapse;
+  border:solid black 1px;
+  width:95%;
+}
+
+table#events th {
+  font-size: medium;
+  text-align: left;
+  background: #241374;
+  color: #ffffff;
+  border-color:#000066;
+  padding: 0 .5em;
+}
+
+table#events td {
+  font-size: small;
+}
+
+table.events caption {
+  color: #000066;
+  font-size: small;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: .5em;
+}
+
+table#events tr:nth-of-type(even){
+  background-color: #ADD8E6;
+}
+table#events tr:nth-of-type(odd) {
+  background-color:#B0C4DE;
+}
+
+table#events tr:hover {
+  background: #c5e3ed;
+}
+figure {
+  border-bottom: 1px solid navy;
+  margin-bottom: 2%;
+}
+
+figcaption {
+  color:navy;
+  font-size: 75%;
+  font-weight: bold;
+  margin-top: 0;
+  width: 90%;
+  line-height: 1.4em;
+}
+
+figcaption span {
+  font-weight: normal;
+  color: gray;
+}
+#content {
+	display: flex;
+}
+
+nav {
+  background-color: dodgerblue;
+  flex: 1;
+}
+
+main {
+  flex:5;
+}
+main {
+  flex:5;
+  padding-left:1em;
+}
+img.feature {
+  float:right;
+  margin-left: 1%;
+}
+
