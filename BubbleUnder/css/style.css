@@ -15,6 +15,8 @@ h1 {
   padding-bottom: .2em;
   padding-left: .4em;
   margin: 0;
+  background: navy url(../images/backgrounds/header-bg.jpg) repeat-y right bottom;
+
 }
 
 h2 {
@@ -26,8 +28,6 @@ h2 {
 
 h1, h2, h3 {
   font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
-}
-
 }
 ul {
 	list-style-type:none;
@@ -63,7 +63,7 @@ nav ul li a:hover, nav ul li a:active {
   }
 
  #tagline {
-    background: #bed8f3;
+    background: #bed8f3 url(../images/backgrounds/tagline-fade.jpg)repeat-y right;
     font-style: italic;
     font-family: Georgia, Times, serif;
     border-top: 3px solid #7da5d8;
@@ -178,8 +178,9 @@ figcaption span {
 }
 
 nav {
-  background-color: dodgerblue;
   flex: 1;
+    height: 484px;
+    background: url(../images/nav-bg.jpg) no-repeat;
 }
 
 main {
@@ -192,5 +193,42 @@ main {
 img.feature {
   float:right;
   margin-left: 1%;
+}
+.form-row {
+   	display: flex;
+}
+
+label {
+   flex: 0 1 20%;
+   font-weight: bold;
+   font-size: small;
+   color:blue;
+}
+
+form input,
+  form  select {
+    flex: 1; 
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+form button {
+    padding: 1em; 
+    background: blue;
+    color: white;
+    border: 0;
+	border-radius:5%;
+}
+  
+form fieldset {
+   	border: 0; 
+}
+  
+.check > label {
+    display: block;
+}
+
+form {
+	margin-bottom:1em;
 }
 
