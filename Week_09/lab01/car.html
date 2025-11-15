@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1>Book a Car</h1>
+      </header>
+      <main>
+        <section id="form">
+          <h2>Contact Us</h2>
+
+          <form action="process.html" method="get" id="booking">
+            <div class="form-row">
+              <label for="contactname">Name:</label>
+              <input
+                type="text"
+                name="contactname"
+                id="contactname" required 
+       autofocus 
+       pattern="[A-Z][a-z]+(\s[A-Z][a-z]+)*" 
+       title="Please enter a valid name, starting with a capital letter. Optional second name must also start with a capital.">
+               
+            </div>
+            <div class="form-row">
+                <label for="contactemail">Email Address:</label>
+                <input type="email" name="contactemail" id= "contactemail" required 
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+       title="Please enter a valid email address.">
+            </div>
+            <div class="form-row">
+               <label>Do you have a driver licence?</label>
+               <div class= "radio-group">
+                   <div><label><input type="radio" name="hasLicence" value="yes" required>Yes</label></div>
+                   <div><label><input type="radio" name="hasLicence" value="no">No</label></div>
+               </div>
+            </div>
+            
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="17" max="80" required 
+       title="Please enter your age (17-80)."></div>
+                <div class="form-row">
+                    <label for="date">Booking date:</label> 
+                    <input type="date" id="date" name="date"  required 
+       title="Please select a date for the booking.">               </div>
+                    <div class="form-row"><label for="car">Select a car:</label>
+                    <select id="car" name= "car" required>
+                        <option value="">-- Please Choose --</option>
+                        <option value="ford focus">Ford Focus</option>
+                        <option value="hyundai_tucson">Hyundai Tucson</option>
+                        <option value="toyota_rav4">Toyota Rav4</option>
+                        <option value="renault_kadjar">Renault Kadjar</option>
+                        <option value="nissan_qashqai">Nissan Qashqai</option>
+                    </select>
+                    </div>
+                    <p>Please provide any other details (e.g. pickup instructions):</p>
+                    <textarea name="details"
+id="details" rows="5" placeholder="Enter other details..."></textarea> 
+       <p class="buttons"><button type="submit">Submit Here.</button><button type="reset">Restart Here:</button></p>
+                       </form>
+        </section>
+        <section id="image">
+          <figure>
+            <img src="images/car.jfif" alt="Car" class="ui fluid image">
+            <figcaption>Car Rental</figcaption>
+          </figure>
+        </section>
+       
+      </main>
+    </div>
+  </body>
+</html>
