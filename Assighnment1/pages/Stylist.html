@@ -1,82 +1,85 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Site Explanation</title>
   <link rel="stylesheet" href="../css/project.css" />
- <style>
-  .contents {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-  .contents h2 {
-    margin-top: 0;
-  }
-  .contents ul {             
-    columns: 2;
-    padding-left: 1rem;
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-  .row > div {
-    flex: 1 1 320px;
-  }
-  .code, .mini {
-    border-radius: 8px;
-    padding: .75rem;
-  }
-  .code {
-    background: #0b1220;
-    color: #e2e8f0;
-    overflow: auto;
-    font-family: monospace;
-    font-size: .9rem;
-  }
-  .mini {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-  }
-  .note {
-    color: #475569;
-    font-size: .95rem;
-  }
-</style>
-
+  <style>
+    .contents {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+    .contents h2 {
+      margin-top: 0;
+    }
+    .contents ul {
+      columns: 2;
+      padding-left: 1rem;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .row > div {
+      flex: 1 1 320px;
+    }
+    .code, .mini {
+      border-radius: 8px;
+      padding: .75rem;
+    }
+    .code {
+      background: #0b1220;
+      color: #e2e8f0;
+      overflow: auto;
+      font-family: monospace;
+      font-size: .9rem;
+    }
+    .mini {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+    }
+    .note {
+      color: #475569;
+      font-size: .95rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Explanation — How This Site Works</h1>
+    <h1>Explanation — How This Page Works</h1>
     <p id="tagline">A breakdown of each section, with tiny live examples.</p>
   </header>
 
   <nav class="site-nav" aria-label="Primary">
-    <a href="../index.html">Home</a>
-    <a href="../pages/hobbies.html">Hobbies</a>
-    <a href="../pages/chess.html">Chess</a>
-    <a href="../pages/christmas-tree.html">Science</a>
-    <a href="../pages/Stylist.html" aria-current="page">GiveMeStyle</a>
+    <a class = "item" href="../index.html">Home</a>
+    <a class = "item" href="../pages/hobbies.html">Hobbies</a>
+    <a class = "item" href="../pages/chess.html">Chess</a>
+    <a class = "item" href="../pages/christmas-tree.html">Science</a>
+    <a class = "item" href="../pages/Stylist.html" aria-current="page">GiveMeStyle</a>
+    <a class = "item" href="../pages/form.html">Form</a>
+    <a class = "item" href="../pages/fomatic.html">Brains</a>
+    <a class = "item" href="access.html">Brain Bling</a>
   </nav>
+
   <section class="intro-duane">
-  <div class="duane-text">
-    <h2>Hi! I'm Duane Dibley!</h2>
-    <p><em>
-      That’s right — Duane Dibley!  
-      The least cool cat in the galaxy, reporting for duty.  
-      I’ll be your guide through this dazzling world of <code>CSS</code> styles.  
-      Buttons, boxes, borders — I’ve got it all (well… mostly) under control.  
-      So polish your sandals, straighten that comb-over, and let’s make this site shine brighter than my teeth!
-    </em></p>
-  </div>
-  <img src="../images/duane.jpg" alt="Duane Dibley looking awkward but cheerful" class="duane-pic">
-</section>
+    <div class="duane-text">
+      <h2>Hi! I'm Duane Dibley!</h2>
+      <p><em>
+        That’s right — Duane Dibley!  
+        The least cool cat in the galaxy, reporting for duty.  
+        I’ll be your guide through this dazzling world of <code>CSS</code> styles.  
+        Buttons, boxes, borders — I’ve got it all (well… mostly) under control.  
+        So polish your sandals, straighten that comb-over, and let’s make this site shine brighter than my teeth!
+      </em></p>
+    </div>
+    <img src="../images/duane.jpg" alt="Duane Dibley looking awkward but cheerful" class="duane-pic">
+  </section>
 
   <main>
     <section class="contents">
@@ -97,9 +100,10 @@
     <h2 id="header">1) Header & Tagline</h2>
     <div class="row">
       <div class="ex mini">
+        
         <header>
           <h1>My Personal Site</h1>
-          <p id="tagline">Nunquam Cedo — Never Surrender</p>
+          <p>Nunquam Cedo — Never Surrender</p>
         </header>
       </div>
       <div class="txt">
@@ -138,6 +142,7 @@
     <h2 id="grid">3) Grid of Cards</h2>
     <div class="row">
       <div class="ex mini">
+        <!-- use the same .grid class you use on the home page -->
         <div class="grid">
           <section class="card"><h3>Card A</h3><p>Short text.</p></section>
           <section class="card"><h3>Card B</h3><p>Short text.</p></section>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How's The Form</title>
+  <link href="../css/project.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="container">
+
+  <header>
+    <h1>How's The Form</h1>
+    <p id="tagline">Get the Form filled in!</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a class = "item" href="../index.html">Home</a>
+    <a class = "item" href="../pages/hobbies.html">Hobbies</a>
+    <a class = "item" href="../pages/chess.html">Chess</a>
+    <a class = "item" href="../pages/christmas-tree.html">Science</a>
+    <a class = "item" href="../pages/Stylist.html">GiveMeStyle</a>
+    <a class = "item" href="../pages/form.html" aria-current="page">Form</a>
+    <a class = "item" href="fomatic.html">Brains</a>
+    <a class = "item" href="access.html">Brain Bling</a>
+  </nav>
+
+  <main>
+    <header>
+      <h2>Book a Brain Transplant/Implant</h2>
+    </header>
+
+    <section id="form-section">
+      <h2>Book a Transplant/Implant</h2>
+
+      <div class="form-container">
+        <form action="process.html" method="get" id="booking">
+          <div class="form-row">
+            <label for="contactname">Name:</label>
+            <input
+              type="text"
+              name="contactname"
+              id="contactname"
+              required
+              autofocus
+              pattern="[A-Z][a-z]+(\s[A-Z][a-z]+)*"
+              title="Please enter a valid name, starting with a capital letter. Optional second name must also start with a capital.">
+          </div>
+
+          <div class="form-row">
+            <label for="contactemail">Email Address:</label>
+            <input
+              type="email"
+              name="contactemail"
+              id="contactemail"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address.">
+          </div>
+
+          <div class="form-row">
+            <label>Do you have a Brain?</label>
+            <div class="radio-group">
+              <div><label><input type="radio" name="hasBrain" value="yes" required>Yes</label></div>
+              <div><label><input type="radio" name="hasBrain" value="no">No</label></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Do you require a new Brain?</label>
+            <div class="radio-group">
+              <div><label><input type="radio" name="wantsBrain" value="yes" required>Yes</label></div>
+              <div><label><input type="radio" name="wantsBrain" value="no">No</label></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="brainage">Brain Age:</label>
+            <input
+              type="number"
+              id="brainage"
+              name="brainage"
+              min="-10"
+              max="80"
+              required
+              title="Please enter your Brain age (-10-80).">
+          </div>
+
+          <div class="form-row">
+            <label for="date">Booking date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+              title="Please select a date for the booking.">
+          </div>
+
+          <div class="form-row">
+            <label for="brain">Select a Brain:</label>
+            <select id="brain" name="brain" required>
+              <option value="">-- Please Choose --</option>
+              <option value="cockroach">Cockroach Brain — €0 (HSE Loyalty)</option>
+              <option value="goldfish">Goldfish Brain — €12</option>
+              <option value="pigeon">Pigeon Brain — €850</option>
+              <option value="sloth">Sloth Brain — €1,400</option>
+              <option value="mouse">Mouse Brain — €2,000</option>
+              <option value="human_budget">Human Brain — Budget — €799,999</option>
+              <option value="human_standard">Human Brain — Standard — €899,999</option>
+              <option value="human_promax">Human Brain — Pro Max — €1,499,999</option>
+            </select>
+          </div>
+
+          <p>Please provide any other details (e.g. pickup instructions):</p>
+          <textarea
+            name="details"
+            id="details"
+            rows="5"
+            placeholder="Enter other details..."></textarea>
+
+          <p class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <table style="width:100%; border-collapse: collapse;">
+        <tr>
+          <th>Brain Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Cockroach Brain — €0 (HSE Loyalty)</td>
+          <td>Indestructible, low-power, basically immortal. May attempt to scurry away during installation.</td>
+        </tr>
+        <tr>
+          <td>Goldfish Brain — €12</td>
+          <td>Lightweight and resets every 7 seconds. Ideal for forgetting bills, exes, and responsibilities.</td>
+        </tr>
+        <tr>
+          <td>Pigeon Brain — €850</td>
+          <td>Great navigation skills. May cause circling behaviour or sudden interest in breadcrumbs.</td>
+        </tr>
+        <tr>
+          <td>Sloth Brain — €1,400</td>
+          <td>Ultra-relaxed with one thought per afternoon. Perfect for stress relief, terrible for deadlines.</td>
+        </tr>
+        <tr>
+          <td>Mouse Brain — €2,000</td>
+          <td>Fast, twitchy, highly motivated by snacks. Occasional sprinting may occur.</td>
+        </tr>
+        <tr>
+          <td>Human Brain — Budget — €799,999</td>
+          <td>Entry-level human cognition. Capable but complains constantly.</td>
+        </tr>
+        <tr>
+          <td>Human Brain — Standard — €899,999</td>
+          <td>Balanced performance. Manages work, family, and mild existential dread.</td>
+        </tr>
+        <tr>
+          <td>Human Brain — Pro Max — €1,499,999</td>
+          <td>Top-tier thinking. Comes with overthinking, anxiety, and perfect recall of embarrassing memories.</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Steven Condra — Assignment One — Personal Website</p>
+  </footer>
+
+</div>
+</body>
+</html>

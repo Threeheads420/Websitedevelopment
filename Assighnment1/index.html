@@ -6,7 +6,7 @@
 <title>Home</title>
 <link rel="stylesheet" href="css/project.css">
   <style>
-    .grid {
+    .content-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
@@ -22,11 +22,14 @@
   </header>
     
   <nav class="site-nav">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="pages/hobbies.html">Hobbies</a>
-    <a href="pages/chess.html">Chess</a>
-    <a href="pages/christmas-tree.html">Science</a>
-    <a href="pages/stylist.html">GiveMeStyle</a>
+    <a class = "item" href="index.html" aria-current="page">Home</a>
+    <a class = "item" href="pages/hobbies.html">Hobbies</a>
+    <a class = "item" href="pages/chess.html">Chess</a>
+    <a class = "item" href="pages/christmas-tree.html">Science</a>
+    <a class = "item" href="pages/stylist.html">GiveMeStyle</a>
+    <a class = "item" href="pages/form.html">Form</a>
+    <a class = "item" href="pages/fomatic.html">Brains</a>
+    <a class = "item" href="pages/access.html">Brain Bling</a>
   </nav>
 
   <main>
@@ -37,7 +40,7 @@
       <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">useful external link</a>.
     </p>
 
-    <div class="grid">
+    <div class="content-grid">
       <!--About Me -->
       <section class="card">
         <h2>About Me<img src="images/itsMe.jpg" alt="Steven Condra" class="aboutme-pic"></h2>
@@ -65,7 +68,7 @@
             <tr><th>Day</th><th>Subject</th><th>Room</th></tr><!--row-->
           </thead>
           <tbody>
-            <tr><td>Mon</td><td>Website Development</td><td>IT220</tr><!--columns-->
+              <tr><td>Mon</td><td>Website Development</td><td>IT220</td></tr><!--columns-->
             <tr><td>Wed</td><td>Website Development</td><td>ITG18</td></tr>
             <tr><td>Fri</td><td>Website Development</td><td>IT220</td></tr>
           </tbody>

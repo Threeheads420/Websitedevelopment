@@ -38,7 +38,7 @@ header .bar {
   gap: 1rem;
 }
 .logo { font-weight: 800; letter-spacing: .3px; }
-main .grid {
+main .content-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
@@ -192,10 +192,112 @@ nav.site-nav a[aria-current="page"] {
 }
 
 
-  .in-pictures .image-side {
-    text-align: center;
 }
-  .in-pictures img {
-    width: 100%;
-    max-width: 350px;
+.form-row {
+  display: flex;
+}
+
+.form-row > label,
+legend {
+  flex: 0 1 20%;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+form input,
+form select {
+  flex: 1;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.check > label {
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+legend {
+  margin-left: -1em;
+}
+
+form button {
+  padding: 1em;
+  background: gray;
+  color: white;
+  border: 0;
+  margin-top: 1em;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form#booking input[type="text"]:valid,
+form#booking input[type="date"]:valid,
+form#booking input[type="email"]:valid,
+form#booking input[type="number"]:valid {
+  color: green;
+}
+
+/* Unmatched */
+form#booking input[type="text"]:invalid,
+form#booking input[type="date"]:invalid,
+form#booking input[type="email"]:invalid,
+form#booking input[type="number"]:invalid {
+  color: red;
+  border-color: red;
+}
+
+.radio-group label { display: inline-flex; align-items: center; gap: .4em; }
+
+.form-container {
+  display: flex;       
+  gap: 20px;               
+  align-items: flex-start; 
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.form-container form {
+  flex: 1;               
+}
+
+.form-container figure {
+  flex: 0 0 300px;       
+  margin: 0;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;         
+  box-sizing: border-box;  
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.ui.segment img.ui.image {
+  width: 100%;
+  height: 180px;     /* same size for all brain pictures */
+  object-fit: cover; /* nice crop */
+  border-radius: 8px;
+}
+
+.sloth-img {
+  object-fit: contain !important;
+  height: 180px !important;   /* match all other images */
+  width: 100% !important;
+  background-color: #0000;     /* optional: remove bars */
+}
+#booking {
+  max-width: 80%;   /* makes it 20% smaller */
+  margin: 0 auto;   /* centres it */
+}
+.ui.card .image img {
+  height: 220px;        /* adjust this number if you want */
+  object-fit: cover;    /* crops nicely */
+  width: 100%;          /* keeps Fomantic layout happy */
 }
